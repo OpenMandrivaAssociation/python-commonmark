@@ -2,7 +2,7 @@
 
 # Workaround for the Requires: generator coming up with
 # bogus ideas
-%global __requires_exclude python3.7dist\\(future\\)
+%global __requires_exclude python[0-9\.]*dist\\(future\\)
 
 Name:           python-%{oname}
 Version:        0.8.1
