@@ -17,6 +17,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python3-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python2-setuptools
+BuildArch:	noarch
 
 %description
 CommonMark-py is a pure Python port of jgm’s commonmark.js,
