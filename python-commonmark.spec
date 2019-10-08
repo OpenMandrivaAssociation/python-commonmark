@@ -5,11 +5,11 @@
 %global __requires_exclude python[0-9\.]*dist\\(future\\)
 
 Name:           python-%{oname}
-Version:	0.9.0
-Release:        1
+Version:	0.9.1
+Release:	1
 Summary:        Python parser for the CommonMark Markdown spec
 
-Source0:	https://files.pythonhosted.org/packages/ac/9d/a9ff7efaf06fb2b6fcc7a035760ba0971250832e37f0c554c335d86c160b/commonmark-0.9.0.tar.gz
+Source0:	https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/commonmark-0.9.1.tar.gz
 License:        Python
 Group:          Development/Python
 Url:            https://recommonmark.readthedocs.io/en/latest/
