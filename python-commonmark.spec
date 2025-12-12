@@ -6,7 +6,7 @@
 
 Name:           python-%{oname}
 Version:	0.9.1
-Release:	4
+Release:	5
 Summary:        Python parser for the CommonMark Markdown spec
 
 Source0:	https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/%{oname}-%{version}.tar.gz
