@@ -1,30 +1,41 @@
-%define oname   commonmark
+%define module commonmark
 
-# Workaround for the Requires: generator coming up with
-# bogus ideas
-%global __requires_exclude python[0-9\.]*dist\\(future\\)
+# package is now deprecated by upstream after this v0.9.2 release.
+# see notice on https://github.com/readthedocs/commonmark.py
+# python-markdown-it-py is recommended as a replacement.
 
-Name:           python-%{oname}
-Version:	0.9.1
-Release:	7
-Summary:        Python parser for the CommonMark Markdown spec
+Name:		python-commonmark
+Version:	0.9.2
+Release:	1
+Summary:	Python parser for the CommonMark Markdown spec
+License:	BSD-3-Clause
+Group:		Development/Python
+URL:		https://recommonmark.readthedocs.io
+Source0:	https://files.pythonhosted.org/packages/source/c/%{module}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
-Source0:	https://files.pythonhosted.org/packages/60/48/a60f593447e8f0894ebb7f6e6c1f25dafc5e89c5879fdc9360ae93ff83f0/%{oname}-%{version}.tar.gz
-License:        Python
-Group:          Development/Python
-Url:            https://recommonmark.readthedocs.io/en/latest/
 BuildSystem:	python
-BuildRequires:  python%{pyver}dist(setuptools)
 BuildArch:	noarch
-Obsoletes:	python2-%{oname}
+BuildRequires:  python%{pyver}dist(setuptools)
+Obsoletes:	python2-%{module}
 
 %description
+Warning: commonmark.py is now deprecated. We recommend using markdown-it-py
+for a commonmark parser going forward.
+
+This package is only provided for backwards compatibility for python packages
+yet to move away from using this module.
+
+------
+
 CommonMark-py is a pure Python port of jgm’s commonmark.js,
 a Markdown parser and renderer for the CommonMark
 specification, using only native modules.
 
+%prep -a
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
+
 %files
-%dir %{py_puresitedir}/%{oname}
 %{_bindir}/cmark
-%{py_puresitedir}/%{oname}-%{version}-*.egg-info
-%{py_puresitedir}/%{oname}/*
+%{python_sitelib}/%{module}
+%{python_sitelib}/%{module}-%{version}-*.egg-info
