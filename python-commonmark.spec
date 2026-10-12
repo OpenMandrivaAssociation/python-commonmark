@@ -6,7 +6,7 @@
 
 Name:		python-commonmark
 Version:	0.9.2
-Release:	1
+Release:	2
 Summary:	Python parser for the CommonMark Markdown spec
 License:	BSD-3-Clause
 Group:		Development/Python
